@@ -154,14 +154,14 @@ flowchart TD
 1. [Download a copy of your final Git repository from the GitHub website.](https://youtube.com/shorts/4bDLccFjQyc?si=dWUDWoW4B_tnADty)
 2. Upload the ZIP file of your code **and** your screencast video to the submission link on Moodle (found under the **Final Project** section).
 3. In the submission text box, paste the URL of your GitHub repository **and** the URL of your **unlisted YouTube** screencast (see the sample below).
-4. Submit before the due date found on the moodle page. Late submissions incur a **10% penalty per day**.
-5. Email daniel.cregg@atu.ie to inform me that you have submitted your project. In the email mention the module name and what year you are in.  
+4. Submit before the due date found on the Moodle page. Late submissions incur a **10% penalty per day**.
+5. Email daniel.cregg@atu.ie to inform me that you have submitted your project. In the email mention the module name and what year you are in.
 
 #### Sample Textbox Input
 
 <pre>
 <b>Screencast Link:</b> https://youtu.be/AbCdEf12345  (unlisted YouTube video)
-<b>GitHub Link:</b> https://github.com/SeamMurohy/aooc-project
+<b>GitHub Link:</b> https://github.com/SeanMurphy/aooc-project
 </pre>
 
 ---
