@@ -1,5 +1,25 @@
 # AOOC - Project Assessment
 
+## ⭐ Start Here: Create Your Repository
+
+> ⚠️ Create your own copy from this template — **do _not_ Fork** (a fork would be public and tied to this repo).
+
+Click the button to open the "create a new repository from this template" page:
+
+[![Use this template](https://img.shields.io/badge/Use%20this%20template-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DanielCreggOrganization/aooc-project-template/generate)
+
+Then, on the page that opens:
+
+1. **Sign in** to GitHub if you are not already.
+2. Set **Owner** to your own account and give the repository a **name** (for example, `aooc-project`).
+3. Set the visibility to **Public** so teaching staff can open your link. *(If you choose Private, you must add your lecturer as a collaborator.)*
+4. Click **Create repository**.
+5. Open your new repository in **GitHub Codespaces**: the green **Code** button → **Codespaces** → **Create codespace on `main`**.
+
+Once your repository is set up, read the rest of this brief for the full requirements and how your work is graded.
+
+---
+
 ## Agenda
 1. [Introduction](#1-introduction)
 2. [Minimum Project Requirements](#2-minimum-project-requirements)
@@ -26,7 +46,7 @@ You may use AI to assist in the development of your code, but you must be able t
 
 ## 2. Minimum Project Requirements
 
-1. **Use this template repository** to create your own GitHub repository, which you will use to track your application development. This repository must contain all documentation, application code, and any resources (e.g. input/output files, images, etc.) used by your application.
+1. **Use this template repository** to create your own GitHub repository, which you will use to track your application development (see **⭐ Start Here** at the top for the steps). This repository must contain all documentation, application code, and any resources (e.g. input/output files, images, etc.) used by your application.
    - No materials outside of your GitHub repository are gradable.
    - Not using GitHub at all for this project will cap your grade at **40%**.
 2. **Develop in GitHub Codespaces**, exactly as we did in the labs.
@@ -34,22 +54,6 @@ You may use AI to assist in the development of your code, but you must be able t
 4. **Complete the README.** It must contain clear instructions for compiling, deploying, and running the application, and briefly outline the nature of the project and the features it contains. All sections of the README template must be filled out — you may add more sections if you wish.
 
 > **Not sure about any of the above?** Email me **before** you begin your project.
-
-### How to create your repository (do this first)
-
-> ⚠️ Create your own copy from this template — **do _not_ Fork** (a fork would be public and tied to this repo).
-
-Click the button to open the "create a new repository from this template" page:
-
-[![Use this template](https://img.shields.io/badge/Use%20this%20template-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DanielCreggOrganization/aooc-project-template/generate)
-
-Then, on the page that opens:
-
-1. **Sign in** to GitHub if you are not already.
-2. Set **Owner** to your own account and give the repository a **name** (for example, `aooc-project`).
-3. Set the visibility to **Public** so teaching staff can open your link. *(If you choose Private, you must add your lecturer as a collaborator.)*
-4. Click **Create repository**.
-5. Open your new repository in **GitHub Codespaces**: the green **Code** button → **Codespaces** → **Create codespace on `main`**.
 
 ---
 
