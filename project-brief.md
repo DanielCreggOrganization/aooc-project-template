@@ -107,7 +107,7 @@ flowchart TB
 
 ## 4. Coding Standards
 
-- Your code **must compile** *(40% grade cap if missed.)*.
+- Your code **must compile**. *(40% grade cap if missed.)*
 - Use **consistent code formatting** throughout.
 - **Comment your code** — at a minimum, one comment per class, method, and variable.
 - Keep all **documentation and commentary free of grammar and spelling mistakes**.
