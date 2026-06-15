@@ -55,6 +55,47 @@ Your application must include, at minimum, the following:
 
 ### Suggested project structure
 
+> **Three styles of the same structure are shown below so you can compare them. Pick the one you prefer and delete the other two.**
+
+#### Option A — ASCII tree (simple, edit by hand)
+
+```text
+aooc-project-template/
+├─ src/
+│  └─ ie/atu/mypackage/
+│     ├─ Main.java              JavaFX GUI + program entry point
+│     ├─ MyObject.java          your custom type (has a unique id)
+│     └─ MyObjectManager.java   add / remove / search / save / load
+└─ resources/
+   ├─ styles.css                JavaFX styling (optional)
+   ├─ myObjects.ser             objects saved by serialisation
+   └─ myObjects.csv             objects exported as CSV
+```
+
+#### Option B — colour folder diagram (Mermaid subgraphs)
+
+```mermaid
+flowchart TB
+    subgraph SRC["📁 src / ie.atu.mypackage"]
+        Main["Main.java — JavaFX GUI + entry point"]
+        Obj["MyObject.java — your custom type (unique id)"]
+        Mgr["MyObjectManager.java — add / remove / search / save / load"]
+    end
+    subgraph RES["📁 resources"]
+        css["styles.css — JavaFX styling"]
+        ser["myObjects.ser — saved objects"]
+        csv["myObjects.csv — CSV export"]
+    end
+    SRC ~~~ RES
+
+    classDef code  fill:#cce5ff,stroke:#004085,color:#000
+    classDef store fill:#fff3cd,stroke:#856404,color:#000
+    class Main,Obj,Mgr code
+    class css,ser,csv store
+```
+
+#### Option C — top-down tree (Mermaid graph)
+
 ```mermaid
 graph TD
     A[JavaFX Project] --> B[src]
