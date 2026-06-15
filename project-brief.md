@@ -92,13 +92,8 @@ aooc-project-template/
 
 ```mermaid
 graph TB
-  subgraph PKG[ie.atu.mypackage]
-    Main[Main]
-    Mgr[MyObjectManager]
-    Obj[MyObject]
-    Main -->|uses| Mgr
-    Mgr -->|manages| Obj
-  end
+    Main[Main.java] -->|uses| Mgr[MyObjectManager.java]
+    Mgr[MyObjectManager.java] -->|manages| Obj[MyObject.java]
 ```
 
 ---
@@ -130,14 +125,14 @@ You **must** follow this submission process carefully. If you miss any part — 
 ```mermaid
 graph TD
     A[Develop in Codespaces] --> B[Commit and push]
-    B --> C{Project complete?}
+    B --> C{Project complete}
     C -->|No| A
-    C -->|Yes| D[Record screencast and upload to YouTube]
-    D --> E[Confirm link works in incognito]
-    E --> F[Download repo as ZIP from GitHub]
-    F --> G[Upload ZIP and screencast to Moodle]
-    G --> H[Paste GitHub and screencast links in text box]
-    H --> I[Submit before the due date]
+    C -->|Yes| D[Record screencast]
+    D --> E[Check link in incognito]
+    E --> F[Download ZIP from GitHub]
+    F --> G[Upload to Moodle]
+    G --> H[Paste links in text box]
+    H --> I[Submit before due date]
 ```
 
 ### 6.1. Screencast Demonstration
