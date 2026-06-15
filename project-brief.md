@@ -91,23 +91,14 @@ aooc-project-template/
 ### How the classes relate
 
 ```mermaid
-flowchart TB
-    subgraph PKG["📦 ie.atu.mypackage (your package)"]
-        direction TB
-        Main["<b>Main</b><br/>+start()<br/>+main()"]
-        Mgr["<b>MyObjectManager</b><br/>+add() +remove() +search()<br/>+save() +load()"]
-        Obj["<b>MyObject</b><br/>-id<br/>-name"]
-        Main -->|uses| Mgr
-        Mgr -->|manages many| Obj
-    end
-
-    classDef blue  fill:#cce5ff,stroke:#004085,color:#000
-    classDef green fill:#d4edda,stroke:#155724,color:#000
-    classDef amber fill:#fff3cd,stroke:#856404,color:#000
-    class Main blue
-    class Mgr green
-    class Obj amber
-    style PKG fill:#fff8e1,stroke:#856404,color:#000,stroke-width:2px
+graph TB
+  subgraph PKG[ie.atu.mypackage]
+    Main[Main]
+    Mgr[MyObjectManager]
+    Obj[MyObject]
+    Main -->|uses| Mgr
+    Mgr -->|manages| Obj
+  end
 ```
 
 ---
@@ -137,25 +128,16 @@ To achieve a high grade, go beyond the minimum requirements:
 You **must** follow this submission process carefully. If you miss any part — especially the screencast — you will be penalised.
 
 ```mermaid
-flowchart TD
-    A[Develop in Codespaces] --> B["Commit & push (at least 2 per week)"]
+graph TD
+    A[Develop in Codespaces] --> B[Commit and push]
     B --> C{Project complete?}
     C -->|No| A
-    C -->|Yes| D["Record 5-min screencast → upload to YouTube as Unlisted"]
-    D --> E["Confirm the link plays in an incognito window"]
-    E --> F[Download your repo as a ZIP from GitHub]
-    F --> G[Upload the ZIP and screencast to Moodle]
-    G --> H["Paste GitHub & screencast links in the text box"]
+    C -->|Yes| D[Record screencast and upload to YouTube]
+    D --> E[Confirm link works in incognito]
+    E --> F[Download repo as ZIP from GitHub]
+    F --> G[Upload ZIP and screencast to Moodle]
+    G --> H[Paste GitHub and screencast links in text box]
     H --> I[Submit before the due date]
-
-    classDef dev      fill:#cce5ff,stroke:#004085,color:#000
-    classDef decision fill:#fff3cd,stroke:#856404,color:#000
-    classDef cast     fill:#e2d9f3,stroke:#4b2e83,color:#000
-    classDef submit   fill:#d4edda,stroke:#155724,color:#000
-    class A,B dev
-    class C decision
-    class D,E cast
-    class F,G,H,I submit
 ```
 
 ### 6.1. Screencast Demonstration
