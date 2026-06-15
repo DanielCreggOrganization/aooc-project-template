@@ -7,34 +7,25 @@
 
 ## Application Function
 
-Discuss, in detail, what the application does. Add a screenshot image of the application in use (See example of image added below). 
+> **Scope:** what your app does for the *user* — its features and how someone uses it. (Keep code structure for *Application Architecture* and UI design for *JavaFX*.)
+
+Discuss, in detail, what the application does. Add a screenshot of the application **in use** (note: this is a *different* image to the architecture screenshot further down). 
 
 ## Running the Application
 
 Provide step by step instructions on how to run your application. Are there any software installs required? 
 
-```MARKDOWN
-List the instructions step by step
-    1. Open the repository in codespaces
-    2. Install Extension Pack for Java
-    3. Open the Main class
-    4. Click on the run icon on the top right
-            :
-```
+For example:
 
-## Minimum Project Requirements
+1. Open the repository in **GitHub Codespaces**.
+2. Install the **Extension Pack for Java** when prompted.
+3. Open the `Main` class.
+4. Click the **Run** icon in the top-right corner.
+5. *(add any further steps, and note any software that must be installed)*
 
-Confirm and demonstrate how you have met all minimum project requirements:
+## Project Requirements
 
-* The project, including code and documentation, will be fully contained in the provided Git Classroom repo.
-* The project must contain a working JavaFX GUI which manages items of your choice.
-* The GUI must at minimum provide access to all 7 methods implemented in the Student Manager App.
-* Methods = Load DB, Add Item, Delete Item, Find item by ID/Name, Show total items, Save to DB, Quit.
-* The code MUST compile. 30% grade reduction if code does not compile.
-* The application code must be formatted in a consistent and standard way.
-* The code must contain comments. One comment per class, method and variable at minimum.
-* There must be a minimum of two commits per week (in practice, you should make many commits on each day that you code).
-* The documentation and commentary must be free of grammar and spelling mistakes.
+All requirements live in **one place** — the [**project brief**](project-brief.md). See *§2 Minimum Project Requirements*, *§3 Minimum Feature Requirements*, and *§4 Coding Standards*, and make sure you have met every one before you submit.
 
 ## Project Requirements Above and Beyond
 
@@ -42,11 +33,15 @@ Discuss any application features or design elements that show you went above and
 
 ## Application Architecture
 
+> **Scope:** the *code* — your classes, their methods, and the data structure(s) (e.g. the `ArrayList`) used to store your objects. (Keep user-facing features for *Application Function* and UI design for *JavaFX*.)
+
 Discuss in detail how the application is structured. List all classes. List their methods and what they do. Discuss what structures are used to store data objects.
 
-Add a screenshot of the application architecture.
+Add a screenshot or diagram of the application architecture, e.g. a class diagram (a *different* image to the in-use screenshot above).
 
 ## JavaFX
+
+> **Scope:** the *UI design* — layout, navigation, styling, and why you chose them. (Keep what the app does for *Application Function* and the code structure for *Application Architecture*.)
 
 Discuss the GUI design used. Discuss why you chose this design and any features you think make your application stand out.
 

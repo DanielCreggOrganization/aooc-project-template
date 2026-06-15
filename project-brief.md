@@ -51,7 +51,7 @@ Your application must include, at minimum, the following:
 - **File I/O** to save your `ArrayList` to a file and to read objects back from a file.
 - **Exception handling** to manage the file I/O safely.
 - **Serialisation** of objects to a file.
-- A **JavaFX GUI** defined in the `Main` class.
+- A **JavaFX GUI** defined in the `Main` class. The GUI must give the user access to all **7 core operations** (as in the Student Manager App): **Load DB, Add Item, Delete Item, Find Item by ID/Name, Show Total Items, Save to DB, Quit**.
 
 ### Suggested project structure
 
@@ -94,9 +94,10 @@ flowchart TB
 
 ## 4. Coding Standards
 
-- Your code **must compile**.
+- Your code **must compile** — *a 30% grade reduction applies if it does not.*
 - Use **consistent code formatting** throughout.
-- **Comment your code.** At a minimum, comment every class and every method.
+- **Comment your code** — at a minimum, one comment per class, method, and variable.
+- Keep all **documentation and commentary free of grammar and spelling mistakes**.
 
 ---
 
