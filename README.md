@@ -25,7 +25,14 @@ For example:
 
 ## Project Requirements
 
-All requirements live in **one place** — the [**project brief**](project-brief.md). See *§2 Minimum Project Requirements*, *§3 Minimum Feature Requirements*, and *§4 Coding Standards*, and make sure you have met every one before you submit.
+All requirements live in **one place** — the [**project brief**](project-brief.md). 
+
+See: 
+1. Minimum Project Requirements 
+2. Minimum Feature Requirements
+3. Coding Standards
+
+Make sure you have met every one and documented everything here before you submit.
 
 ## Project Requirements Above and Beyond
 
