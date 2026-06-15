@@ -55,10 +55,6 @@ Your application must include, at minimum, the following:
 
 ### Suggested project structure
 
-> **Three styles of the same structure are shown below so you can compare them. Pick the one you prefer and delete the other two.**
-
-#### Option A — ASCII tree (simple, edit by hand)
-
 ```text
 aooc-project-template/
 ├─ src/
@@ -72,75 +68,26 @@ aooc-project-template/
    └─ myObjects.csv             objects exported as CSV
 ```
 
-#### Option B — colour folder diagram (Mermaid subgraphs)
-
-```mermaid
-flowchart TB
-    subgraph SRC["📁 src / ie.atu.mypackage"]
-        Main["Main.java — JavaFX GUI + entry point"]
-        Obj["MyObject.java — your custom type (unique id)"]
-        Mgr["MyObjectManager.java — add / remove / search / save / load"]
-    end
-    subgraph RES["📁 resources"]
-        css["styles.css — JavaFX styling"]
-        ser["myObjects.ser — saved objects"]
-        csv["myObjects.csv — CSV export"]
-    end
-    SRC ~~~ RES
-
-    classDef code  fill:#cce5ff,stroke:#004085,color:#000
-    classDef store fill:#fff3cd,stroke:#856404,color:#000
-    class Main,Obj,Mgr code
-    class css,ser,csv store
-```
-
-#### Option C — top-down tree (Mermaid graph)
-
-```mermaid
-graph TD
-    A[JavaFX Project] --> B[src]
-    B --> C[ie.atu.mypackage]
-    C --> D[Main.java]
-    C --> E[MyObject.java]
-    C --> F[MyObjectManager.java]
-    A --> G[resources]
-    G --> H[styles.css]
-    G --> I[myObjects.ser]
-    G --> J[myObjects.csv]
-
-    classDef root fill:#e2e3e5,stroke:#383d41,color:#000
-    classDef code fill:#cce5ff,stroke:#004085,color:#000
-    classDef res  fill:#d4edda,stroke:#155724,color:#000
-    class A root
-    class B,C,D,E,F code
-    class G,H,I,J res
-```
-
 ### How the classes relate
 
 ```mermaid
-classDiagram
-    class Main:::blue {
-        +start()
-        +main()
-    }
-    class MyObjectManager:::green {
-        +add()
-        +remove()
-        +search()
-        +save()
-        +load()
-    }
-    class MyObject:::amber {
-        -id
-        -name
-    }
-    Main --> MyObjectManager : uses
-    MyObjectManager --> MyObject : manages many
+flowchart TB
+    subgraph PKG["📦 ie.atu.mypackage (your package)"]
+        direction TB
+        Main["<b>Main</b><br/>+start()<br/>+main()"]
+        Mgr["<b>MyObjectManager</b><br/>+add() +remove() +search()<br/>+save() +load()"]
+        Obj["<b>MyObject</b><br/>-id<br/>-name"]
+        Main -->|uses| Mgr
+        Mgr -->|manages many| Obj
+    end
 
     classDef blue  fill:#cce5ff,stroke:#004085,color:#000
     classDef green fill:#d4edda,stroke:#155724,color:#000
     classDef amber fill:#fff3cd,stroke:#856404,color:#000
+    class Main blue
+    class Mgr green
+    class Obj amber
+    style PKG fill:#fff8e1,stroke:#856404,color:#000,stroke-width:2px
 ```
 
 ### How data flows through the app
@@ -193,8 +140,8 @@ flowchart TD
     A[Develop in Codespaces] --> B["Commit & push (at least 2 per week)"]
     B --> C{Project complete?}
     C -->|No| A
-    C -->|Yes| D[Record a 5-minute screencast]
-    D --> E[Check screencast sharing permissions]
+    C -->|Yes| D["Record 5-min screencast → upload to YouTube as Unlisted"]
+    D --> E["Confirm the link plays in an incognito window"]
     E --> F[Download your repo as a ZIP from GitHub]
     F --> G[Upload the ZIP and screencast to Moodle]
     G --> H["Paste GitHub & screencast links in the text box"]
@@ -212,25 +159,27 @@ flowchart TD
 
 ### 6.1. Screencast Demonstration
 
-- Record a **5-minute** screen recording using [MS Stream](https://www.microsoft365.com/launch/stream), YouTube, or any tool of your choosing.
-- Download the screencast video file so you can upload it to Moodle alongside your code.
+- Record a **5-minute** screen recording of your application (use any screen-recording tool you like).
+- **Upload it to YouTube as an _Unlisted_ video and submit that link.** *Unlisted* means anyone with the link can watch it, but it will not appear in search results or on your channel. This is the cleanest option and the one I recommend.
+  - *Why not MS Stream?* MS Stream has no true "unlisted" setting — it relies on SharePoint link-sharing, which is easy to misconfigure, and every year students leave me unable to open their video. If you do use MS Stream or OneDrive, you **must** set the share to *"Anyone in ATU with the link"* (or a public link), or it counts as inaccessible.
+- Keep a copy of the video file so you can also upload it to Moodle alongside your code.
 - In the screencast you should:
   - Demonstrate your app running and its operation.
   - Give a brief code walkthrough, highlighting the places where you expended most of your effort.
   - Highlight any additional functionality you implemented.
-- **MAKE SURE YOUR SCREENCAST IS ACCESSIBLE BY ME.** Check your Stream/OneDrive permissions and confirm that it can be viewed by me. It is your responsibility to ensure I can see the screencast. If I cannot, your grade will be capped at **40%**.
+- **CONFIRM THAT I CAN OPEN IT.** Paste your link into a **private / incognito browser window** (where you are *not* logged in) and check that the video plays. It is your responsibility to ensure I can view the screencast — if I cannot, your grade will be capped at **40%**.
 
 ### 6.2. Moodle Submission
 
 1. [Download a copy of your final Git repository from the GitHub website.](https://youtube.com/shorts/4bDLccFjQyc?si=dWUDWoW4B_tnADty)
 2. Upload the ZIP file of your code **and** your screencast video to the submission link on Moodle (found under the **Final Project** section).
-3. In the submission text box, paste the URL of your GitHub repository **and** the URL of your MS Stream screencast recording (see the sample below).
+3. In the submission text box, paste the URL of your GitHub repository **and** the URL of your **unlisted YouTube** screencast (see the sample below).
 4. Submit before the due date. Late submissions incur a **10% penalty per day**.
 
 #### Sample Textbox Input
 
 <pre>
-<b>Screencast Link:</b> https://atlantictu-my.sharepoint.com/:v:/g/personal/daniel_cregg_atu_ie/Ed9h1upB77VFuIm0ezGYj8MBlOaHCoiWUJkLUFqj0Z9OJQ?e=ua2JM1
+<b>Screencast Link:</b> https://youtu.be/AbCdEf12345  (unlisted YouTube video)
 <b>GitHub Link:</b> https://github.com/DanielCreggOrganization/ooc2-final-project-2021-annmurphy
 </pre>
 
