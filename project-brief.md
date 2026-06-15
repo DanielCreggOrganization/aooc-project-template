@@ -37,16 +37,19 @@ You may use AI to assist in the development of your code, but you must be able t
 
 ### How to create your repository (do this first)
 
-> ⚠️ Use the green **Use this template** button — **do _not_ Fork**. "Use this template" gives you your own independent copy to work in; forking would tie your work to this repo and make it public.
+> ⚠️ Create your own copy from this template — **do _not_ Fork** (a fork would be public and tied to this repo).
 
-1. **Sign in** to your GitHub account.
-2. Open this template repository's page on GitHub.
-3. Click the green **Use this template** button (near the top-right), then choose **Create a new repository**.
-4. Under **Owner**, choose **your own** GitHub account.
-5. Give the repository a **name** (for example, `aooc-project`).
-6. Set the visibility to **Public** so teaching staff can open your link. *(If you choose Private, you must add your lecturer as a collaborator.)*
-7. Click **Create repository**.
-8. Open your new repository in **GitHub Codespaces** to start working: the green **Code** button → **Codespaces** → **Create codespace on `main`**.
+Click the button to open the "create a new repository from this template" page:
+
+[![Use this template](https://img.shields.io/badge/Use%20this%20template-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DanielCreggOrganization/aooc-project-template/generate)
+
+Then, on the page that opens:
+
+1. **Sign in** to GitHub if you are not already.
+2. Set **Owner** to your own account and give the repository a **name** (for example, `aooc-project`).
+3. Set the visibility to **Public** so teaching staff can open your link. *(If you choose Private, you must add your lecturer as a collaborator.)*
+4. Click **Create repository**.
+5. Open your new repository in **GitHub Codespaces**: the green **Code** button → **Codespaces** → **Create codespace on `main`**.
 
 ---
 
