@@ -1,7 +1,7 @@
 # Advanced Object Oriented Computing Project
 
 **Title:** Items Application Manager  
-**Name:** Patrick Murphy  
+**Name:** Sean Murphy  
 **Student ID:** G00123456  
 **Screencast Link:** [https://youtu.be/AbCdEf12345](https://youtu.be/AbCdEf12345)
 
