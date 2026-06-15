@@ -3,63 +3,30 @@ package ie.atu.mypackage;
 import java.io.Serializable;
 
 /**
- * MyObject represents a single item managed by the application.
+ * MyObject represents ONE item that your application manages.
  *
- * Rename this class to match the type you are managing (e.g. Book, Car, Phone)
- * and change the fields to suit. The {@code id} field must stay as a UNIQUE
- * identifier for each object (e.g. an ISBN, a registration plate, an IMEI).
- *
- * It implements {@link Serializable} so that a whole list of these objects can
- * be written to, and read back from, a file (object serialisation).
+ * GUIDANCE (delete these notes as you complete the class):
+ *  - Rename this class to the type you are managing (e.g. Book, Car, Phone).
+ *  - Keep "implements Serializable" so a list of these can be saved to a file.
+ *  - 'id' must UNIQUELY identify each object (e.g. ISBN, registration, IMEI).
+ *  - Add any other fields you need, then write a constructor, getters/setters
+ *    and a toString().
+ *  - You must be able to explain everything you write here in your screencast.
  */
 public class MyObject implements Serializable {
 
-    /** Version number used by Java when serialising this class. */
+    /** Keeps serialisation stable across versions — leave this as-is. */
     private static final long serialVersionUID = 1L;
 
-    /** The unique identifier for this object (no two objects share an id). */
+    /** The UNIQUE identifier for this object. */
     private String id;
 
     /** A human-readable name for this object. */
     private String name;
 
-    /**
-     * Creates a new MyObject.
-     *
-     * @param id   the unique identifier
-     * @param name the object's name
-     */
-    public MyObject(String id, String name) {
-        this.id = id;
-        this.name = name;
-    }
+    // TODO: add a constructor that sets the fields above.
 
-    /** @return the unique identifier */
-    public String getId() {
-        return id;
-    }
+    // TODO: add getters (and setters if you need them) for each field.
 
-    /** @param id the unique identifier to set */
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    /** @return the name */
-    public String getName() {
-        return name;
-    }
-
-    /** @param name the name to set */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * @return a single-line description of this object. This format is also
-     *         used when each object is written to the CSV file.
-     */
-    @Override
-    public String toString() {
-        return id + "," + name;
-    }
+    // TODO: override toString() to return a readable description of the object.
 }
