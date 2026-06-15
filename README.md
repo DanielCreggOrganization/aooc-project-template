@@ -3,7 +3,7 @@
 **Title:** Items Application Manager  
 **Name:** Patrick Murphy  
 **Student ID:** G00123456  
-**Screencast Link:** https://www.myscreencastlink.madeup
+**Screencast Link:** [https://youtu.be/AbCdEf12345](https://youtu.be/AbCdEf12345)
 
 ## Application Function
 
