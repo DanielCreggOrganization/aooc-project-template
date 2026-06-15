@@ -33,22 +33,22 @@ Confirm and demonstrate how you have met all minimum project requirements:
 * The code MUST compile. 30% grade reduction if code does not compile.
 * The application code must be formatted in a consistent and standard way.
 * The code must contain comments. One comment per class, method and variable at minimum.
-* There must be two commits per week minimum (Note: Should be many commits per day coding).
-* The documentation and commentary must be free of a grammar and speling mistakes.
+* There must be a minimum of two commits per week (in practice, you should make many commits on each day that you code).
+* The documentation and commentary must be free of grammar and spelling mistakes.
 
-## Project Requirments above and beyond
+## Project Requirements Above and Beyond
 
-Discuss any application features or design elements that show you went above and beyond basic requirments.
+Discuss any application features or design elements that show you went above and beyond the basic requirements.
 
 ## Application Architecture
 
-Discuss in detail how the application is structured. List all Classes. List their method and what they do. Discuss what structures are used to store data objects.
+Discuss in detail how the application is structured. List all classes. List their methods and what they do. Discuss what structures are used to store data objects.
 
 Add a screenshot of the application architecture.
 
 ## JavaFX
 
-Discuss the GUI design used. Discuss why you chose this design and any features you thing make your application stands out.
+Discuss the GUI design used. Discuss why you chose this design and any features you think make your application stand out.
 
 ![alt text](images/javaFX.gif "My App")
 

@@ -12,79 +12,176 @@
 7. [Important Notes](#7-important-notes)
 8. [Grading Rubric](#8-grading-rubric)
 
+---
+
 ## 1. Introduction
 
-For this project you are required to design and develop a JavaFX GUI (Graphical User Interface) application. The application must manage objects of a custom type you choose (e.g. Car, Phone, Book). Please note your custom type must have one instance variable which uniquly identidfys each object (e.g. Registration Plate number for a car, IMEI number for a phone, ISBN number for a Book) You will use an ArrayList to store and manage the objects.You may use AI to assit in the development of your code but your must be able to explain how your code works in the manditory screencast video your supply with your submission. 
+For this project you are required to design and develop a JavaFX GUI (Graphical User Interface) application. The application must manage objects of a custom type that you choose (e.g. `Car`, `Phone`, `Book`).
+
+Your custom type must have **one instance variable that uniquely identifies each object** (e.g. a registration plate number for a car, an IMEI number for a phone, or an ISBN number for a book). You will use an `ArrayList` to store and manage these objects.
+
+You may use AI to assist in the development of your code, but you must be able to explain how your code works in the mandatory screencast video that you supply with your submission.
+
+---
 
 ## 2. Minimum Project Requirements
-- You must use this template repository to create a GitHub repository to track you application development. This repository will contain all documentation, application code and any resources (e.g., input and output files, images etc) used by your application. Please note, no materials outside of your GitHub repository are gradable. Not using GitHub at all for this project will incur a cap of 40% on your grade. If you do not understand what is meant by this, then email me before you begin your project.
-- This application must be developed using GitHub Codespaces as we did in labs.
-- Project development must be tracked on GitHub via regular commits. Your GitHub repository must have at minimum two commits per week, if not I may contact you for a live project demonstration. The project will be capped at 40% if you fail to attend this meeting.
-- The README file should contain clear instructions for compiling, deploying, and running the application. It should also briefly outline the nature of the project and detail the set of features it contains. All sections of the README template must be filled out and add more sections if you please.
+
+1. **Use this template repository** to create your own GitHub repository, which you will use to track your application development. This repository must contain all documentation, application code, and any resources (e.g. input/output files, images, etc.) used by your application.
+   - No materials outside of your GitHub repository are gradable.
+   - Not using GitHub at all for this project will cap your grade at **40%**.
+2. **Develop in GitHub Codespaces**, exactly as we did in the labs.
+3. **Commit regularly.** Your repository must have **at least two commits per week** (in practice, you should commit many times per coding session). If you do not commit regularly, I may contact you for a live project demonstration; failing to attend this meeting will cap your grade at **40%**.
+4. **Complete the README.** It must contain clear instructions for compiling, deploying, and running the application, and briefly outline the nature of the project and the features it contains. All sections of the README template must be filled out — you may add more sections if you wish.
+
+> **Not sure about any of the above?** Email me **before** you begin your project.
+
+---
 
 ## 3. Minimum Feature Requirements
-The application must incorporate, at minimum, the following features:
-- 3 classes (The Main class which will hold the JavaFX code, a class to define the object you chose and a manager class for the objects you create)
-- A Java collections ArrayList to store your custom objects.
-- A class to manage these objects (e.g. BookManager). This manager class must be able to add, remove, serialize, deserialize, find total and search for the objects in the ArrayList you create.
-- Use of the Stream API to assist mainly with searching and streaming the ArrayList to a file. A Lambda express must be used with streams. 
-- File IO to save your arraylist to a file and read objects from a file.
-- Exception Handling to assist the IO
-- Serialisation of Objects to a file
-- JavaFX GUI defined in a Main class
+
+Your application must include, at minimum, the following:
+
+- **Three classes:**
+  - A `Main` class that holds the JavaFX code.
+  - A class that defines the custom object you choose (e.g. `Book`).
+  - A manager class for those objects (e.g. `BookManager`).
+- An **`ArrayList`** (from the Java Collections Framework) to store your custom objects.
+- A **manager class** that can `add`, `remove`, `serialize`, `deserialize`, find the `total`, and `search` for objects in the `ArrayList`.
+- **Stream API** usage, mainly to help with searching and with streaming the `ArrayList` to a file. At least one **lambda expression** must be used with a stream.
+- **File I/O** to save your `ArrayList` to a file and to read objects back from a file.
+- **Exception handling** to manage the file I/O safely.
+- **Serialisation** of objects to a file.
+- A **JavaFX GUI** defined in the `Main` class.
+
+### Suggested project structure
 
 ```mermaid
 graph TD
     A[JavaFX Project] --> B[src]
-    B --> C[ie.atu.javafx]
+    B --> C[ie.atu.mypackage]
     C --> D[Main.java]
-    C --> E[myObject.java]
-    C --> F[myObjectManager.java]
+    C --> E[MyObject.java]
+    C --> F[MyObjectManager.java]
     A --> G[resources]
     G --> H[styles.css]
     G --> I[myObjects.ser]
     G --> J[myObjects.csv]
 ```
 
+### How the classes relate
+
+```mermaid
+classDiagram
+    class Main {
+        +start(Stage stage) void
+        +main(String[] args) void
+    }
+    class MyObject {
+        -String id
+        -String name
+        +getId() String
+        +getName() String
+        +toString() String
+    }
+    class MyObjectManager {
+        -ArrayList~MyObject~ items
+        +add(MyObject item) void
+        +remove(String id) boolean
+        +search(String id) MyObject
+        +total() int
+        +saveToFile(String path) void
+        +loadFromFile(String path) void
+    }
+    class Serializable {
+        <<interface>>
+    }
+    Main --> MyObjectManager : uses
+    MyObjectManager "1" o-- "*" MyObject : stores
+    MyObject ..|> Serializable : implements
+```
+
+### How data flows through the app
+
+```mermaid
+flowchart LR
+    User([User]) -->|clicks a button| GUI["JavaFX GUI (Main.java)"]
+    GUI -->|add / remove / search| Manager[MyObjectManager]
+    Manager <-->|holds objects in memory| List(ArrayList of MyObject)
+    Manager -->|serialize / save| File[("File: .ser / .csv")]
+    File -->|deserialize / load| Manager
+```
+
+---
+
 ## 4. Coding Standards
-- Your code must compile.
-- Consistent code formatting.
-- Code commentary is essential. Comment every class and method at minimum.
+
+- Your code **must compile**.
+- Use **consistent code formatting** throughout.
+- **Comment your code.** At a minimum, comment every class and every method.
+
+---
 
 ## 5. Enhanced Features
-To achieve a high grade:
-- Go above and beyond the minimum by adding extra manager methods (e.g., a method to sort objects) and features to your application which you have researched yourself. Document any extra methods or features in your README.
-- Add JavaFX features not demonstrated in labs.
-- Create an animated gif of you using your application and add it to your Readme.
-- Create an executable jar file that opens your application independently on windows and include this in your GitHub repository.
+
+To achieve a high grade, go beyond the minimum requirements:
+
+- Add **extra manager methods** that you have researched yourself (e.g. a method to sort objects), and document them in your README.
+- Add **JavaFX features** that were not demonstrated in the labs.
+- Create an **animated GIF** of you using your application and add it to your README.
+- Create an **executable JAR file** that launches your application independently on Windows, and include it in your GitHub repository.
+
+---
 
 ## 6. Project Submission Process
-You **must** follow this submission process carefully. If you miss any part, especially the screencast, you will be penalised.
+
+You **must** follow this submission process carefully. If you miss any part — especially the screencast — you will be penalised.
+
+```mermaid
+flowchart TD
+    A[Develop in Codespaces] --> B["Commit & push (at least 2 per week)"]
+    B --> C{Project complete?}
+    C -->|No| A
+    C -->|Yes| D[Record a 5-minute screencast]
+    D --> E[Check screencast sharing permissions]
+    E --> F[Download your repo as a ZIP from GitHub]
+    F --> G[Upload the ZIP and screencast to Moodle]
+    G --> H["Paste GitHub & screencast links in the text box"]
+    H --> I[Submit before the due date]
+```
 
 ### 6.1. Screencast Demonstration
-- 5-minute screen recording using [MS Stream](https://www.microsoft365.com/launch/stream), YouTube or any tool of your choosing.
-- Download the screencast video file. This will be uploaded to the moodle submission area along with your code.
-- Demonstrate your app running and its operation
-- Give a brief code walkthrough highlighting places where you expended most of your effort
-- Highlight any additional functionality you implemented
-- **MAKE SURE YOUR SCREENCAST IS ACCESSIBLE BY ME**. CHECK STREAMS/OneDrive PERMISSIONS and make sure it can be seen by me. It is your responsibility to make sure I can see the screencast. If I can not your grade will be capped at 40%.
+
+- Record a **5-minute** screen recording using [MS Stream](https://www.microsoft365.com/launch/stream), YouTube, or any tool of your choosing.
+- Download the screencast video file so you can upload it to Moodle alongside your code.
+- In the screencast you should:
+  - Demonstrate your app running and its operation.
+  - Give a brief code walkthrough, highlighting the places where you expended most of your effort.
+  - Highlight any additional functionality you implemented.
+- **MAKE SURE YOUR SCREENCAST IS ACCESSIBLE BY ME.** Check your Stream/OneDrive permissions and confirm that it can be viewed by me. It is your responsibility to ensure I can see the screencast. If I cannot, your grade will be capped at **40%**.
 
 ### 6.2. Moodle Submission
-- [Download a copy of your final Git repository from the GitHub website.](https://youtube.com/shorts/4bDLccFjQyc?si=dWUDWoW4B_tnADty)
-- In the submission area on Moodle, where you will upload your zipped project, you will see a text box in which you will be able to enter text (See sample below). Put the URL link to your project GitHub repository and the URL link to your MS Streams screencast recording you created.
-- Upload this zip file of your code and your screencast video under the submission link on Moodle. You can find the submission link under the Final Project section on the Moodle page.
-- Submit the file to Moodle before the due date. The due date can be found by clicking on the submission link on Moodle. Late submissions will incur a 10% penalty per day.
 
-  #### Sample Textbox Input
-  <pre>
-  <b>Screencast Link:</b> https://atlantictu-my.sharepoint.com/:v:/g/personal/daniel_cregg_atu_ie/Ed9h1upB77VFuIm0ezGYj8MBlOaHCoiWUJkLUFqj0Z9OJQ?e=ua2JM1
-  <b>GitHub Link:</b> https://github.com/DanielCreggOrganization/ooc2-final-project-2021-annmurphy
-  </pre>
+1. [Download a copy of your final Git repository from the GitHub website.](https://youtube.com/shorts/4bDLccFjQyc?si=dWUDWoW4B_tnADty)
+2. Upload the ZIP file of your code **and** your screencast video to the submission link on Moodle (found under the **Final Project** section).
+3. In the submission text box, paste the URL of your GitHub repository **and** the URL of your MS Stream screencast recording (see the sample below).
+4. Submit before the due date. Late submissions incur a **10% penalty per day**.
+
+#### Sample Textbox Input
+
+<pre>
+<b>Screencast Link:</b> https://atlantictu-my.sharepoint.com/:v:/g/personal/daniel_cregg_atu_ie/Ed9h1upB77VFuIm0ezGYj8MBlOaHCoiWUJkLUFqj0Z9OJQ?e=ua2JM1
+<b>GitHub Link:</b> https://github.com/DanielCreggOrganization/ooc2-final-project-2021-annmurphy
+</pre>
+
+---
 
 ## 7. Important Notes
-1. Only materials within this GitHub repository will be graded. (40% grade cap if missed)
-2. Insufficient commits may require a live demonstration (40% grade cap if missed)
-3. Late submissions incur a 10% penalty per day
+
+1. Only materials within your GitHub repository will be graded. *(40% grade cap if missed.)*
+2. Insufficient commits may require a live demonstration. *(40% grade cap if missed.)*
+3. Late submissions incur a **10% penalty per day**.
+
+---
 
 ## 8. Grading Rubric
 
@@ -93,3 +190,5 @@ You **must** follow this submission process carefully. If you miss any part, esp
 | **UI/UX** | • Basic template-like<br>• Minimal effort<br>• Poor navigation<br>• Inconsistent design | • Basic effort shown<br>• Meets minimums<br>• Navigation works<br>• Shows competency | • Consistent design<br>• Intuitive navigation<br>• Beyond basic requirements | • Bespoke elements<br>• Consistent design<br>• Fluid navigation<br>• Above requirements | • Professional finish<br>• Innovative design<br>• Flawless UX<br>• Cohesive elements<br>• Exceeds requirements |
 | **Technical** | • Inconsistent code<br>• Unfinished sections<br>• Poor formatting | • Basic competence<br>• No new elements<br>• Meets minimums | • Good structure<br>• Technical mastery<br>• Minor added extras | • Professional code<br>• Clean architecture<br>• Consistent style | • Excellence shown<br>• Advanced features<br>• Perfect structure |
 | **Docs** | • Basic README<br>• Few commits<br>• Poor submission | • Basic sections done<br>• Sporadic commits<br>• Meets minimums<br>• Minimal comments | • Good GitHub usage<br>• Detailed README<br>• Regular commits<br>• Clear comments | • Bespoke content<br>• Clean repo<br>• Detailed docs | • Professional docs<br>• Rich media<br>• Perfect GitHub use<br>• Research depth |
+</content>
+</invoke>
