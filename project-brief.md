@@ -66,38 +66,40 @@ graph TD
     G --> H[styles.css]
     G --> I[myObjects.ser]
     G --> J[myObjects.csv]
+
+    classDef root fill:#e2e3e5,stroke:#383d41,color:#000
+    classDef code fill:#cce5ff,stroke:#004085,color:#000
+    classDef res  fill:#d4edda,stroke:#155724,color:#000
+    class A root
+    class B,C,D,E,F code
+    class G,H,I,J res
 ```
 
 ### How the classes relate
 
 ```mermaid
 classDiagram
-    class Main {
-        +start(Stage stage) void
-        +main(String[] args) void
+    class Main:::blue {
+        +start()
+        +main()
     }
-    class MyObject {
-        -String id
-        -String name
-        +getId() String
-        +getName() String
-        +toString() String
+    class MyObjectManager:::green {
+        +add()
+        +remove()
+        +search()
+        +save()
+        +load()
     }
-    class MyObjectManager {
-        -ArrayList~MyObject~ items
-        +add(MyObject item) void
-        +remove(String id) boolean
-        +search(String id) MyObject
-        +total() int
-        +saveToFile(String path) void
-        +loadFromFile(String path) void
-    }
-    class Serializable {
-        <<interface>>
+    class MyObject:::amber {
+        -id
+        -name
     }
     Main --> MyObjectManager : uses
-    MyObjectManager "1" o-- "*" MyObject : stores
-    MyObject ..|> Serializable : implements
+    MyObjectManager --> MyObject : manages many
+
+    classDef blue  fill:#cce5ff,stroke:#004085,color:#000
+    classDef green fill:#d4edda,stroke:#155724,color:#000
+    classDef amber fill:#fff3cd,stroke:#856404,color:#000
 ```
 
 ### How data flows through the app
@@ -109,6 +111,15 @@ flowchart LR
     Manager <-->|holds objects in memory| List(ArrayList of MyObject)
     Manager -->|serialize / save| File[("File: .ser / .csv")]
     File -->|deserialize / load| Manager
+
+    classDef user  fill:#f8d7da,stroke:#721c24,color:#000
+    classDef gui   fill:#cce5ff,stroke:#004085,color:#000
+    classDef logic fill:#d4edda,stroke:#155724,color:#000
+    classDef store fill:#fff3cd,stroke:#856404,color:#000
+    class User user
+    class GUI gui
+    class Manager logic
+    class List,File store
 ```
 
 ---
@@ -147,6 +158,15 @@ flowchart TD
     F --> G[Upload the ZIP and screencast to Moodle]
     G --> H["Paste GitHub & screencast links in the text box"]
     H --> I[Submit before the due date]
+
+    classDef dev      fill:#cce5ff,stroke:#004085,color:#000
+    classDef decision fill:#fff3cd,stroke:#856404,color:#000
+    classDef cast     fill:#e2d9f3,stroke:#4b2e83,color:#000
+    classDef submit   fill:#d4edda,stroke:#155724,color:#000
+    class A,B dev
+    class C decision
+    class D,E cast
+    class F,G,H,I submit
 ```
 
 ### 6.1. Screencast Demonstration
