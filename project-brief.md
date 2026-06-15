@@ -184,7 +184,8 @@ flowchart TD
 
 1. Only materials within your GitHub repository will be graded. *(40% grade cap if missed.)*
 2. Insufficient commits may require a live demonstration. *(40% grade cap if missed.)*
-3. Late submissions incur a **10% penalty per day**.
+3. Your code must compile. *(40% grade cap if missed.)*
+4. Late submissions incur a **10% penalty per day**.
 
 ---
 
