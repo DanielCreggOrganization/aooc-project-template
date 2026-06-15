@@ -20,10 +20,9 @@ Provide step by step instructions on how to run your application. Are there any 
 For example:
 
 1. Open the repository in **GitHub Codespaces**.
-2. Install the **Extension Pack for Java** when prompted.
-3. Open the `Main` class.
-4. Click the **Run** icon in the top-right corner.
-5. *(add any further steps, and note any software that must be installed)*
+2. Open the `Main` class.
+3. Click the **Run** icon in the top-right corner.
+4. *(add any further steps, and note any software that must be installed)*
 
 ## Project Requirements
 
