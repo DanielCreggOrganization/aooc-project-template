@@ -1,5 +1,6 @@
 {
     "workbench.startupEditor":"none",
+    "task.allowAutomaticTasks": "on",
     "editor.minimap.enabled": false,
     "editor.inlayHints.enabled": "off",
     "files.exclude": {
