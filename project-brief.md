@@ -90,26 +90,6 @@ flowchart TB
     style PKG fill:#fff8e1,stroke:#856404,color:#000,stroke-width:2px
 ```
 
-### How data flows through the app
-
-```mermaid
-flowchart LR
-    User([User]) -->|clicks a button| GUI["JavaFX GUI (Main.java)"]
-    GUI -->|add / remove / search| Manager[MyObjectManager]
-    Manager <-->|holds objects in memory| List(ArrayList of MyObject)
-    Manager -->|serialize / save| File[("File: .ser / .csv")]
-    File -->|deserialize / load| Manager
-
-    classDef user  fill:#f8d7da,stroke:#721c24,color:#000
-    classDef gui   fill:#cce5ff,stroke:#004085,color:#000
-    classDef logic fill:#d4edda,stroke:#155724,color:#000
-    classDef store fill:#fff3cd,stroke:#856404,color:#000
-    class User user
-    class GUI gui
-    class Manager logic
-    class List,File store
-```
-
 ---
 
 ## 4. Coding Standards
