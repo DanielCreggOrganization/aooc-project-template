@@ -14,21 +14,21 @@
 
 ## 1. Introduction
 
-For this project you are required to design and develop a JavaFX GUI (Graphical User Interface) application. The application must manage objects of the type you have chosen from the `Project Object Choice List`, which is available on the Moodle page (e.g. Elephant). You will use an ArrayList to store and manage the objects (e.g. Elephants).
+For this project you are required to design and develop a JavaFX GUI (Graphical User Interface) application. The application must manage objects of a custom type you choose (e.g. Car, Phone, Book). Please note your custom type must have one instance variable which uniquly identidfys each object (e.g. Registration Plate number for a car, IMEI number for a phone, ISBN number for a Book) You will use an ArrayList to store and manage the objects.You may use AI to assit in the development of your code but your must be able to explain how your code works in the manditory screencast video your supply with your submission. 
 
 ## 2. Minimum Project Requirements
-- You must use the Project GitHub Repository provided to you on the Moodle page. No other development set up will be acceptable. This link to create your repository can be found under the `Project Assessment` section on Moodle. You need to click on the link to create your repository. This repository will contain all documentation, application code and any resources (e.g., input and output files, images etc) used by your application. Please note, no materials outside of your GitHub repository are gradable. Using another GitHub repository or not using GitHub at all for this project will incur a penalty of 60%. If you do not understand what is meant by this, then email me before you begin your project.
-- This application must be developed using GitHub Codespaces.
+- You must use this template repository to create a GitHub repository to track you application development. This repository will contain all documentation, application code and any resources (e.g., input and output files, images etc) used by your application. Please note, no materials outside of your GitHub repository are gradable. Not using GitHub at all for this project will incur a cap of 40% on your grade. If you do not understand what is meant by this, then email me before you begin your project.
+- This application must be developed using GitHub Codespaces as we did in labs.
 - Project development must be tracked on GitHub via regular commits. Your GitHub repository must have at minimum two commits per week, if not I may contact you for a live project demonstration. The project will be capped at 40% if you fail to attend this meeting.
 - The README file should contain clear instructions for compiling, deploying, and running the application. It should also briefly outline the nature of the project and detail the set of features it contains. All sections of the README template must be filled out and add more sections if you please.
 
 ## 3. Minimum Feature Requirements
 The application must incorporate, at minimum, the following features:
-- 3 classes (Main, a class to define the object you chose and a manager class for the objects you create)
-- A Java collections ArrayList to store your objects.
-- A class to manage these objects. This manager class must be able to add, remove, serialize, deserialize, find total and search for the objects in the ArrayList you create.
-- Use of the Stream API to assist mainly with searching and streaming the ArrayList to a file
-- File IO to save your arraylist to a file and read objects from a file
+- 3 classes (The Main class which will hold the JavaFX code, a class to define the object you chose and a manager class for the objects you create)
+- A Java collections ArrayList to store your custom objects.
+- A class to manage these objects (e.g. BookManager). This manager class must be able to add, remove, serialize, deserialize, find total and search for the objects in the ArrayList you create.
+- Use of the Stream API to assist mainly with searching and streaming the ArrayList to a file. A Lambda express must be used with streams. 
+- File IO to save your arraylist to a file and read objects from a file.
 - Exception Handling to assist the IO
 - Serialisation of Objects to a file
 - JavaFX GUI defined in a Main class
@@ -53,10 +53,10 @@ graph TD
 
 ## 5. Enhanced Features
 To achieve a high grade:
-- Go above and beyond the minimum by adding extra methods (e.g., a method to list all objects by their unique ID in the array) and features (e.g., ask the user to choose the size of the array) to your application which you have researched yourself. Document any extra methods or features in your README.
+- Go above and beyond the minimum by adding extra manager methods (e.g., a method to sort objects) and features to your application which you have researched yourself. Document any extra methods or features in your README.
 - Add JavaFX features not demonstrated in labs.
 - Create an animated gif of you using your application and add it to your Readme.
-- Create an executable jar file that opens your application independently and include this in your GitHub repository.
+- Create an executable jar file that opens your application independently on windows and include this in your GitHub repository.
 
 ## 6. Project Submission Process
 You **must** follow this submission process carefully. If you miss any part, especially the screencast, you will be penalised.
