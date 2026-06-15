@@ -35,6 +35,19 @@ You may use AI to assist in the development of your code, but you must be able t
 
 > **Not sure about any of the above?** Email me **before** you begin your project.
 
+### How to create your repository (do this first)
+
+> ⚠️ Use the green **Use this template** button — **do _not_ Fork**. "Use this template" gives you your own independent copy to work in; forking would tie your work to this repo and make it public.
+
+1. **Sign in** to your GitHub account.
+2. Open this template repository's page on GitHub.
+3. Click the green **Use this template** button (near the top-right), then choose **Create a new repository**.
+4. Under **Owner**, choose **your own** GitHub account.
+5. Give the repository a **name** (for example, `aooc-project`).
+6. Set the visibility to **Public** so teaching staff can open your link. *(If you choose Private, you must add your lecturer as a collaborator.)*
+7. Click **Create repository**.
+8. Open your new repository in **GitHub Codespaces** to start working: the green **Code** button → **Codespaces** → **Create codespace on `main`**.
+
 ---
 
 ## 3. Minimum Feature Requirements
