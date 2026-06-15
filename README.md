@@ -5,6 +5,10 @@
 **Student ID:** G00123456  
 **Screencast Link:** [https://youtu.be/AbCdEf12345](https://youtu.be/AbCdEf12345)
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/DanielCreggOrganization/aooc-project-template)
+
+> ▶️ **Run this project in the cloud:** click the badge above. *After you create your own repository from this template, change `DanielCreggOrganization/aooc-project-template` in the link to your own `username/repository` — or just use the green **Code → Codespaces** button on your repo, which always opens the right one.*
+
 ## Application Function
 
 > **Scope:** what your app does for the *user* — its features and how someone uses it. (Keep code structure for *Application Architecture* and UI design for *JavaFX*.)
